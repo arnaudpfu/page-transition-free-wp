@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap');
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body.scroll-block::-webkit-scrollbar {
+    display: none;
+}
+  
+/* Hide scrollbar for IE, Edge and Firefox */
+body.scroll-block {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    overflow: hidden;
+/*     margin-right: 18px; */
+}
+
+.wppatr-overlay-setup div[id],
+.wppatr-loader-setup div[id] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 10%;
+    height: 10%;
+    min-width: auto;
+    min-height: auto;
+    max-width: none;
+    max-height: none;
+    overflow: visible;
+    opacity: 1;
+    position: static;
+    border-width: 0px;
+    border-radius: 0px;
+    border-style: none;
+    background-image: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    top: 0%;
+    left: 0%;
+}
+
+.wppatr-overlay-setup svg[id],
+.wppatr-loader-setup svg[id] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 90%;
+    height: 90%;
+    min-width: auto;
+    min-height: auto;
+    max-width: none;
+    max-height: none;
+    overflow: visible;
+    opacity: 1;
+    position: static;
+    border-width: 0px;
+    border-radius: 0px;
+    border-style: none;
+    background-image: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    fill:#ccc;
+    stroke:#ccc;
+    stroke-width: 0px;
+    stroke-dasharray: 0px;
+    stroke-dashoffset: 0px;
+}
+
+#transition-container{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999999999999999999;
+}
+
+#transition-container.page-loaded{
+    pointer-events: none;
+}
+
+.wppatr-transition-container .wppatr-overlay-setup div[id],
+.wppatr-transition-container .wppatr-overlay-setup svg[id]{
+    -webkit-transition: all 1s ease 0s;
+    -o-transition: all 1s ease 0s;
+    transition: all 1s ease 0s;
+}
+
+#overlay-setup {
+    width: 100%;
+    height: 100%;
+    position: static !important;
+    z-index: 1 !important;
+}
+
+#loader-setup {
+    width: 100%;
+    height: 100%;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    z-index: 2 !important;
+    -webkit-transition: all 0ms ease-in-out;
+    -o-transition: all 0ms ease-in-out;
+    transition: all 0ms ease-in-out;
+}
+
+.page-loaded #loader-setup,
+#loader-setup.paused{
+    opacity: 0;
+}
+
+#loader-setup.paused *{
+    -webkit-animation-play-state: paused !important;
+            animation-play-state: paused !important;
+}
+
+#flint-notice{
+    user-select: none;
+    font-size: 12px;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+}
